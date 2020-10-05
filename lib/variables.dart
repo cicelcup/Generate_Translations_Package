@@ -4,6 +4,7 @@ import 'strings_app.dart';
 
 ///Variables of control.
 ///
+/// [stringsPath] store the path where strings are located
 /// [isDivided] define if the line was divided in the file
 /// [temp] store temporary the line that is being read
 /// [listOfLines] store the new list of lines
@@ -13,6 +14,7 @@ import 'strings_app.dart';
 /// [listOfTranslations] Store the objects from the translation file
 /// [newSeparator] used to create and read files
 ///
+String stringsPath;
 bool isDivided = false;
 String temp = '';
 List<String> listOfLines = [];

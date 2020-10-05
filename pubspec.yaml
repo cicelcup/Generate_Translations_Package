@@ -1,6 +1,6 @@
 name: generate_translations
 description: A package for generated the translations in the project
-version: 0.0.1
+version: 0.0.2
 author: Jorge Peroza
 homepage: https://github.com/cicelcup/Generate_Translations_Package.git
 

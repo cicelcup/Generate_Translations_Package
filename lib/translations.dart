@@ -15,12 +15,20 @@ import 'variables.dart';
 ///flutter pub run translations.dart and the argument [option_1] or [option_2]
 ///[option_1] generate the file to send to the client
 ///[option_2] generate the json file
-///Translations are stored in lib/translations/app_strings_i18n.dart
+///Translations are indicated in the argument and store in [stringsPath]
+///arg translation should be similar as translations/app_strings_i18n.dart
 ///
 Future<void> start(List args) async {
   if (args.isNotEmpty) {
-    option = args[0]; //read the first argument
-    await readSheetsFile();
+    if (args.length == 2) {
+      option = args[0]; //read the first argument
+      stringsPath = args[1]; //read the path of the file
+      await readSheetsFile();
+    } else {
+      print(
+          'Its necessary to provide two arguments, first the option and second '
+          'the path');
+    }
   } else {
     print('Not arguments passed to the script');
   }
@@ -65,7 +73,7 @@ Future<void> readSheetsFile() async {
 ///
 /// If the file doesn't exist, display error message
 Future<void> readAppStringsI18N() async {
-  var translationFile = '../lib/translations/app_strings_i18n.dart';
+  var translationFile = '../lib/$stringsPath';
   var filePath = Platform.script.resolve(translationFile);
   var file = File.fromUri(filePath);
 
