@@ -1,0 +1,24 @@
+name: generate_translations
+description: A package for generated the translations in the project
+version: 0.0.1
+author: Jorge Peroza
+homepage: https://github.com/cicelcup/Generate_Translations_Package.git
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.17.0 <2.0.0"
+
+dependencies:
+  #equatable
+  equatable: ^1.2.4
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
